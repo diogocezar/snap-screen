@@ -1,0 +1,106 @@
+/* Fundo e estilo de vídeo */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    -webkit-user-select: none; /* Previne seleção indesejada ao arrastar */
+}
+
+.container {
+    position: relative;
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(30, 30, 30, 0.85); /* Fundo semi-transparente */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* Barra de Título Arrastável */
+.title-bar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgba(20, 20, 20, 0.8); /* Fundo para contraste */
+    -webkit-app-region: drag; /* Torna a área arrastável */
+    user-select: none; /* Previne seleção de texto */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Estilo do vídeo */
+video {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Estilo dos botões e controles */
+.controls {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+.dropdown {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 1em;
+    outline: none;
+}
+
+.button {
+    padding: 12px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition:
+        background 0.3s,
+        transform 0.3s;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.start {
+    background-color: #4caf50;
+    color: white;
+}
+
+.start:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.stop {
+    background-color: #f44336;
+    color: white;
+}
+
+.stop:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+}

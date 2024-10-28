@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Screen Recorder</title>
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header class="title-bar">Snap Screen</header>
+            <video id="video" autoplay muted></video>
+            <div class="controls">
+                <select id="screenSelect" class="dropdown">
+                    <option value="">Selecione uma Tela</option>
+                </select>
+                <button id="startBtn" class="button start">
+                    Iniciar Gravação
+                </button>
+                <button id="stopBtn" class="button stop" disabled>
+                    Encerrar Gravação
+                </button>
+            </div>
+        </div>
+        <script src="renderer.js"></script>
+    </body>
+</html>
